@@ -1,0 +1,302 @@
+
+
+U-Boot 2022.10-rc3 (Dec 11 2024 - 03:03:28 +0000)
+
+CPU:   MediaTek MT7621A ver 1, eco 3
+Boot:  DDR3, SPI-NOR 3-Byte Addr
+Clock: CPU: 880MHz, DDR: 1200MT/s, Bus: 220MHz, XTAL: 40MHz
+Model: SNR-M522-G11
+DRAM:  128 MiB
+Core:  37 devices, 16 uclasses, devicetree: separate
+Loading Environment from nowhere... OK
+Net:
+Warning: eth@1e100000 (eth0) using random MAC address - 0e:77:5e:ea:b0:7f
+eth0: eth@1e100000
+Saving Environment to nowhere... not possible
+
+  *** U-Boot Boot Menu ***
+
+      1. Startup system (Default)
+      2. WEB recovery
+      3. Upgrade firmware
+      4. Upgrade bootloader
+      0. U-Boot console
+
+
+  Press UP/DOWN to move, ENTER to select, ESC/CTRL+C to quit
+SF: Detected XM25QH128С with page size 256 Bytes, erase size 4 KiB, total 16 MiB
+Reading 'firmware' from 0x50000 to 0x83000000, size 0x40 ... OK
+Reading 'firmware' from 0x50000 to 0x83000000, size 0x1b2974 ... OK
+## Booting kernel from Legacy Image at 83000000 ...
+   Image Name:   SNR-M522-G11
+   Image Type:   MIPS Linux Kernel Image (lzma compressed)
+   Data Size:    1780020 Bytes = 1.7 MiB
+   Load Address: 81001000
+   Entry Point:  81001000
+   Verifying Checksum ... OK
+   Uncompressing Kernel Image
+[    0.000000] Linux version 4.4.198 (dev@runner-rztzusz-project-2117-concurrent-0) (gcc version 5.4.0 (LEDE GCC 5.4.0 2.7.0-dev-2503171801-38261f752) ) #0 SMP Fri Mar 28 11:54:47 UTC 2025
+[    0.000000] SoC Type: MediaTek MT7621 ver:1 eco:3
+[    0.000000] bootconsole [early0] enabled
+[    0.000000] CPU0 revision is: 0001992f (MIPS 1004Kc)
+[    0.000000] MIPS: machine is SNR-Keep-AC10
+[    0.000000] Determined physical RAM map:
+[    0.000000]  memory: 08000000 @ 00000000 (usable)
+[    0.000000] Initrd not found or empty - disabling initrd
+[    0.000000] Zone ranges:
+[    0.000000]   DMA      [mem 0x0000000000000000-0x0000000000ffffff]
+[    0.000000]   Normal   [mem 0x0000000001000000-0x0000000007ffffff]
+[    0.000000] Movable zone start for each node
+[    0.000000] Early memory node ranges
+[    0.000000]   node   0: [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] Initmem setup node 0 [mem 0x0000000000000000-0x0000000007ffffff]
+[    0.000000] VPE topology {2,2} total 4
+[    0.000000] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    0.000000] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    0.000000] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    0.000000] PERCPU: Embedded 10 pages/cpu @816b4000 s8576 r8192 d24192 u40960
+[    0.000000] Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 32512
+[    0.000000] Kernel command line: console=ttyS0,57600 rootfstype=squashfs,jffs2
+[    0.000000] PID hash table entries: 512 (order: -1, 2048 bytes)
+[    0.000000] Dentry cache hash table entries: 16384 (order: 4, 65536 bytes)
+[    0.000000] Inode-cache hash table entries: 8192 (order: 3, 32768 bytes)
+[    0.000000] Writing ErrCtl register=00018840
+[    0.000000] Readback ErrCtl register=00018840
+[    0.000000] Memory: 123928K/131072K available (4180K kernel code, 204K rwdata, 920K rodata, 252K init, 201K bss, 7144K reserved, 0K cma-reserved)
+[    0.000000] SLUB: HWalign=32, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+[    0.000000] Hierarchical RCU implementation.
+[    0.000000] NR_IRQS:256
+[    0.000000] clocksource: GIC: mask: 0xffffffffffffffff max_cycles: 0xcaf478abb4, max_idle_ns: 440795247997 ns
+[    0.000000] clocksource: MIPS: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 4343773742 ns
+[    0.000009] sched_clock: 32 bits at 440MHz, resolution 2ns, wraps every 4880645118ns
+[    0.015461] Calibrating delay loop... 586.13 BogoMIPS (lpj=2930688)
+[    0.080675] pid_max: default: 32768 minimum: 301
+[    0.089937] Mount-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    0.102975] Mountpoint-cache hash table entries: 1024 (order: 0, 4096 bytes)
+[    1.462538] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    1.462547] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    1.462557] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    1.462705] CPU1 revision is: 0001992f (MIPS 1004Kc)
+[    0.227316] Synchronize counters for CPU 1: done.
+[    1.103849] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    1.103856] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    1.103862] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    1.103930] CPU2 revision is: 0001992f (MIPS 1004Kc)
+[    0.347383] Synchronize counters for CPU 2: done.
+[    1.223697] Primary instruction cache 32kB, VIPT, 4-way, linesize 32 bytes.
+[    1.223703] Primary data cache 32kB, 4-way, PIPT, no aliases, linesize 32 bytes
+[    1.223709] MIPS secondary cache 256kB, 8-way, linesize 32 bytes.
+[    1.223789] CPU3 revision is: 0001992f (MIPS 1004Kc)
+[    0.466942] Synchronize counters for CPU 3: done.
+[    0.476366] Brought up 4 CPUs
+[    0.487011] clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+[    0.506483] futex hash table entries: 1024 (order: 3, 32768 bytes)
+[    0.518930] pinctrl core: initialized pinctrl subsystem
+[    0.530589] NET: Registered protocol family 16
+[    0.569578] mt7621_gpio 1e000600.gpio: registering 32 gpios
+[    0.580699] mt7621_gpio 1e000600.gpio: registering 32 gpios
+[    0.591768] mt7621_gpio 1e000600.gpio: registering 32 gpios
+[    0.603329] mt7621-pci 1e140000.pcie: Failed to get gpio for PCIe1
+[    0.615525] mt7621-pci 1e140000.pcie: Failed to get gpio for PCIe2
+[    1.930910] PCIe port 2 link down
+[    1.937345] PCI coherence region base: 0x60000000, mask/settings: 0xf0000002
+[    1.984199] PCI host bridge to bus 0000:00
+[    1.992302] pci_bus 0000:00: root bus resource [mem 0x60000000-0x6fffffff]
+[    2.005884] pci_bus 0000:00: root bus resource [io  0x1e160000-0x1e16ffff]
+[    2.019525] pci_bus 0000:00: root bus resource [??? 0x00000000 flags 0x0]
+[    2.033000] pci_bus 0000:00: No busn resource found for root bus, will use [bus 00-ff]
+[    2.049562] pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    2.065380] pci 0000:00:01.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+[    2.082740] pci 0000:00:00.0: BAR 8: assigned [mem 0x60000000-0x600fffff]
+[    2.096134] pci 0000:00:01.0: BAR 9: assigned [mem 0x60100000-0x602fffff pref]
+[    2.110450] pci 0000:00:00.0: BAR 1: assigned [mem 0x60300000-0x6030ffff]
+[    2.123928] pci 0000:00:01.0: BAR 1: assigned [mem 0x60310000-0x6031ffff]
+[    2.137417] pci 0000:01:00.0: BAR 0: assigned [mem 0x60000000-0x600fffff]
+[    2.150887] pci 0000:00:00.0: PCI bridge to [bus 01]
+[    2.160712] pci 0000:00:00.0:   bridge window [mem 0x60000000-0x600fffff]
+[    2.174226] pci 0000:02:00.0: BAR 0: assigned [mem 0x60100000-0x601fffff 64bit pref]
+[    2.189616] pci 0000:02:00.0: BAR 2: assigned [mem 0x60200000-0x60203fff 64bit pref]
+[    2.204985] pci 0000:02:00.0: BAR 4: assigned [mem 0x60204000-0x60204fff 64bit pref]
+[    2.220364] pci 0000:00:01.0: PCI bridge to [bus 02]
+[    2.230178] pci 0000:00:01.0:   bridge window [mem 0x60100000-0x602fffff pref]
+[    2.246215] clocksource: Switched to clocksource GIC
+[    2.257979] NET: Registered protocol family 2
+[    2.267370] TCP established hash table entries: 1024 (order: 0, 4096 bytes)
+[    2.281128] TCP bind hash table entries: 1024 (order: 1, 8192 bytes)
+[    2.293718] TCP: Hash tables configured (established 1024 bind 1024)
+[    2.306396] UDP hash table entries: 256 (order: 1, 8192 bytes)
+[    2.317919] UDP-Lite hash table entries: 256 (order: 1, 8192 bytes)
+[    2.330591] NET: Registered protocol family 1
+[    2.351103] squashfs: version 4.0 (2009/01/31) Phillip Lougher
+[    2.362627] jffs2: version 2.2 (NAND) (SUMMARY) (LZMA) (RTIME) (CMODE_PRIORITY) (c) 2001-2006 Red Hat, Inc.
+[    2.384753] io scheduler noop registered
+[    2.392479] io scheduler deadline registered (default)
+[    2.404058] Serial: 8250/16550 driver, 3 ports, IRQ sharing disabled
+[    2.417895] console [ttyS0] disabled
+[    2.424900] 1e000c00.uartlite: ttyS0 at MMIO 0x1e000c00 (irq = 33, base_baud [    2.442890] console [ttyS0] enabled
+[    2.442890] console [ttyS0] enabled
+[    2.456742] bootconsole [early0] disabled
+[    2.456742] bootconsole [early0] disabled
+[    2.476374] m25p80 spi32766.0: XM25QH128C (16384 Kbytes)
+[    2.487095] 4 ofpart partitions found on MTD device spi32766.0
+[    2.498777] Creating 4 MTD partitions on "spi32766.0":
+[    2.509065] 0x000000000000-0x000000030000 : "Bootloader"
+[    2.521010] 0x000000030000-0x000000040000 : "Config"
+[    2.532155] 0x000000040000-0x000000050000 : "Factory"
+[    2.543393] 0x000000050000-0x000001000000 : "firmware"
+[    2.568833] no rootfs found after FIT image in "firmware"
+[    2.603014] 2 uimage-fw partitions found on MTD device firmware
+[    2.614870] 0x000000050000-0x000000210000 : "kernel"
+[    2.626124] 0x000000210000-0x000001000000 : "rootfs"
+[    2.637444] mtd: device 5 (rootfs) set to be root filesystem
+[    2.648897] 1 squashfs-split partitions found on MTD device rootfs
+[    2.661275] 0x000000940000-0x000001000000 : "rootfs_data"
+[    2.673971] libphy: Fixed MDIO Bus: probed
+[    2.716476] libphy: mdio: probed
+[    2.723461] mtk_soc_eth 1e100000.ethernet: generated random MAC address 26:d5:bc:39:e0:7f
+[    2.740345] mtk_soc_eth 1e100000.ethernet: connected mac 0 to PHY at fixed-0:00 [uid=00000000, driver=Generic PHY]
+[    2.761902] mtk_soc_eth 1e100000.ethernet eth0: mediatek frame engine at 0xbe100000, irq 10
+[    2.778708] mtk_soc_eth 1e100000.ethernet: generated random MAC address 56:9c:3f:69:d4:c8
+[    2.795550] mtk_soc_eth 1e100000.ethernet: connected mac 1 to PHY at fixed-0:01 [uid=00000000, driver=Generic PHY]
+[    2.817053] mtk_soc_eth 1e100000.ethernet eth1: mediatek frame engine at 0xbe100000, irq 10
+[    2.834825] mt7621_wdt 1e000100.wdt: Initialized
+[    2.845596] NET: Registered protocol family 10
+[    2.855970] NET: Registered protocol family 17
+[    2.865006] bridge: automatic filtering via arp/ip/ip6tables has been deprecated. Update your scripts to load br_netfilter if you need this.
+[    2.890273] Bridge firewalling registered
+[    2.898308] 8021q: 802.1Q VLAN Support v1.8
+[    2.946347] mt753x gsw: Switch is MediaTek MT7530 rev 1
+[    2.983073] libphy: mt753x_mdio: probed
+[    2.996871] hctosys: unable to open rtc device (rtc0)
+[    3.011726] VFS: Mounted root (squashfs filesystem) readonly on device 31:5.
+[    3.026674] Freeing unused kernel memory: 252K
+[    3.035557] This architecture does not have kernel memory protection.
+[    3.705998] init: Console is alive
+[    3.713083] init: - watchdog -
+[    5.026011] kmodloader: loading kernel modules from /etc/modules-boot.d/*
+[    5.078672] aw2026_led_init: driver version: V1.0.3
+[    5.090454] kmodloader: done loading kernel modules from /etc/modules-boot.d/*
+[    5.116482] init: - preinit -
+[    6.003929] random: jshn: uninitialized urandom read (4 bytes read, 111 bits of entropy available)
+[    6.123586] random: jshn: uninitialized urandom read (4 bytes read, 113 bits of entropy available)
+[    6.278380] random: jshn: uninitialized urandom read (4 bytes read, 113 bits of entropy available)
+[    6.378556] random: jshn: uninitialized urandom read (4 bytes read, 114 bits of entropy available)
+[    6.464772] random: jshn: uninitialized urandom read (4 bytes read, 116 bits of entropy available)
+/etc/preinit: line 127: netmsg: not found
+Press the [f] key and hit [enter] to enter failsafe mode
+Press the [1], [2], [3] or [4] key and hit [enter] to select the debug level
+[    9.617861] random: nonblocking pool is initialized
+[    9.834754] jffs2: notice: (449) jffs2_build_xattr_subsystem: complete building xattr subsystem, 0 of xdatum (0 unchecked, 0 orphan) and 0 of xref (0 dead, 0 orphan) found.
+[    9.867501] mount_root: switching to jffs2 overlay
+[    9.893968] urandom-seed: Seeding with /etc/urandom.seed
+[   10.140330] procd: - early -
+[   10.146277] procd: - watchdog -
+[   10.796331] procd: - watchdog -
+[   10.802915] procd: - ubus -
+[   11.036122] procd: - init -
+Please press Enter to activate this console.
+[   11.328588] kmodloader: loading kernel modules from /etc/modules.d/*
+[   11.385135] l2tp_core: L2TP core driver, V2.0
+[   11.395259] l2tp_netlink: L2TP netlink interface
+[   11.406467] sit: IPv6 over IPv4 tunneling driver
+[   11.421962] gre: GRE over IPv4 demultiplexor driver
+[   11.433258] ip_gre: GRE over IPv4 tunneling driver
+[   11.449478] ip6_tables: (C) 2000-2006 Netfilter Core Team
+[   11.469431] Netfilter messages via NETLINK v0.30.
+[   11.481550] ip_set: protocol 6
+[   11.537589] i2c /dev entries driver
+[   11.551684] aw2026_led 0-0064: AW2026 chip id 31
+[   11.576460] i2c-gpio 1e000000.palmbus:i2c@0: using pins 3 (SDA) and 4 (SCL)
+[   11.603259] u32 classifier
+[   11.608718]     input device check on
+[   11.616026]     Actions configured
+[   11.625029] GACT probability on
+[   11.632539] Mirror/redirect action on
+[   11.649194] nf_conntrack version 0.5.0 (1940 buckets, 7760 max)
+[   12.615097] mtk-eip93 1e004000.crypto: Assigning IRQ: 26
+[   12.627961] mtk-eip93 1e004000.crypto: Init succesfull
+[   12.640822] ip_tables: (C) 2000-2006 Netfilter Core Team
+[   13.031102] MT7603 AP Driver version: 4.1.2.2
+[   13.044866] [mtfwd] init, version 1.0nf_conntrack_rtsp v0.7 loading
+[   13.221862] nf_nat_rtsp v0.7 loading
+[   13.290118] xt_time: kernel timezone is -0000
+[   13.314039] PPP generic driver version 2.4.2
+[   13.324030] PPP MPPE Compression module registered
+[   13.334862] NET: Registered protocol family 24
+[   13.345318] PPTP driver version 0.8.5
+[   13.355784] l2tp_ppp: PPPoL2TP kernel driver, V2.0
+[   13.371463] kmodloader: done loading kernel modules from /etc/modules.d/*
+[   19.601518] mediatek_soc_hnat 1e100000.hnat: wan = eth1
+[   19.612025] mediatek_soc_hnat 1e100000.hnat: lan = eth0
+[   19.622678] mediatek_soc_hnat 1e100000.hnat: ppd = eth0
+[   19.633254] mediatek_soc_hnat 1e100000.hnat: gmac num = 2
+[   19.644433] mediatek_soc_hnat 1e100000.hnat: ext devices = rai0
+[   19.656332] mediatek_soc_hnat 1e100000.hnat: ext devices = ra0
+[   19.668140] mediatek_soc_hnat 1e100000.hnat: ext devices = rai1
+[   19.680107] mediatek_soc_hnat 1e100000.hnat: ext devices = ra1
+[   19.691861] mediatek_soc_hnat 1e100000.hnat: ext devices = rai2
+[   19.703792] mediatek_soc_hnat 1e100000.hnat: ext devices = ra2
+[   19.715539] mediatek_soc_hnat 1e100000.hnat: ext devices = rai3
+[   19.727469] mediatek_soc_hnat 1e100000.hnat: ext devices = ra3
+[   19.739201] mediatek_soc_hnat 1e100000.hnat: ext devices = apclii0
+[   19.751653] mediatek_soc_hnat 1e100000.hnat: ext devices = apcli0
+[   19.766439] mediatek_soc_hnat 1e100000.hnat: FOE entry number = 8192
+[   19.780552] mediatek_soc_hnat 1e100000.hnat: hwnat start
+[   19.791383] hnat roaming work enable
+[   26.694643] efuse_probe: efuse = 511161
+[   28.458952] rai0: init reduce TCP ACK
+[   29.606321] extif_set_dev(rai0)
+[   29.613939] [mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
+[   29.667309] device eth0 entered promiscuous mode
+[   29.679097] br-lan: port 1(eth0) entered forwarding state
+[   29.690149] br-lan: port 1(eth0) entered forwarding state
+[   29.734294] device rai0 entered promiscuous mode
+[   29.744335] br-lan: port 2(rai0) entered forwarding state
+[   29.755481] br-lan: port 2(rai0) entered forwarding state
+[   30.501434] MT7603 Andes FW Version: CL173766_R
+[   30.510753] MT7603 Andes FW Build Date: 20171110105932
+[   31.686221] br-lan: port 1(eth0) entered forwarding state
+[   31.746210] br-lan: port 2(rai0) entered forwarding state
+[   32.747543] extif_set_dev(ra0)
+[   32.811182] device ra0 entered promiscuous mode
+[   32.820640] br-lan: port 3(ra0) entered forwarding state
+[   32.831470] br-lan: port 3(ra0) entered forwarding state
+1
+card 1  -cra0
+1
+card 2  -cra0 -crai0
+[   34.826218] br-lan: port 3(ra0) entered forwarding state
+[   41.794761] module exit
+[   43.326832] [mtfwd] no net device found for eth0 or
+[   44.352556] [mtfwd] exit
+[   48.280042] [mtfwd] init, version 1.0[mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
+[   49.399413] [mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
+[   49.411829] [mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
+[   49.423764] [mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
+[   50.141423] extif_put_dev(rai0)
+[   50.179436] rai0: exit reduce TCP ACK
+[   50.187183] br-lan: port 2(rai0) entered disabled state
+[   53.470454] efuse_probe: efuse = 511161
+[   55.208062] rai0: init reduce TCP ACK
+[   56.325269] extif_set_dev(rai0)
+[   56.332042] br-lan: port 2(rai0) entered forwarding state
+[   56.343116] br-lan: port 2(rai0) entered forwarding state
+[   56.532520] extif_put_dev(ra0)
+[   57.183169] br-lan: port 3(ra0) entered disabled state
+[   57.417012] MT7603 Andes FW Version: CL173766_R
+[   57.426116] MT7603 Andes FW Build Date: 20171110105932
+[   58.336191] br-lan: port 2(rai0) entered forwarding state
+[   59.446613] br-lan: port 3(ra0) entered forwarding state
+[   59.457395] br-lan: port 3(ra0) entered forwarding state
+[   59.468361] extif_set_dev(ra0)
+1
+card 1  -cra0
+1
+card 2  -cra0 -crai0
+[   61.456193] br-lan: port 3(ra0) entered forwarding state
+[   70.607276] [mtfwd] no net device found for eth0 or
+[   71.632577] [mtfwd] exit
+[   77.349006] [mtfwd] init, version 1.0[mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
+[   78.467736] [mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
+[   78.479786] [mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
+[   78.491876] [mtfwd] Mac: 8c:ae:db:2d:e9:a2 was aleady existed.
