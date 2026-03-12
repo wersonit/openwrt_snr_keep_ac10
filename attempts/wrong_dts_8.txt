@@ -1,0 +1,30 @@
+&gmac0 {
+	nvmem-cells = <&macaddr_factory_e000>;
+	nvmem-cell-names = "mac-address";
+};
+
+&gmac1 {
+	status = "okay";
+	label = "wan";
+	phy-handle = <&ethphy3>;
+
+	// this is confirmed from factory section on stock firmware
+	nvmem-cells = <&macaddr_factory_e006>;
+	nvmem-cell-names = "mac-address";
+};
+
+&ethphy3 {
+	/delete-property/ interrupts;
+};
+
+&switch0 {
+	ports {
+		port@4 {
+			status = "okay";
+			label = "lan";
+		};
+	};
+};
+
+
+// dmesg says that link is up on wan, but I cant ping anything

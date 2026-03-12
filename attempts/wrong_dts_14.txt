@@ -1,0 +1,48 @@
+&gmac0 {
+	nvmem-cells = <&macaddr_factory_e000>;
+	nvmem-cell-names = "mac-address";
+};
+
+// &gmac1 {
+// 	status = "okay";
+// 	label = "wan";
+// 	phy-handle = <&ethphy3>;
+//
+// 	// this is confirmed from factory section on stock firmware
+// 	nvmem-cells = <&macaddr_factory_e006>;
+// 	nvmem-cell-names = "mac-address";
+// };
+
+// &ethphy3 {
+// 	/delete-property/ interrupts;
+// };
+
+&switch0 {
+	ports {
+	// 	port@0 {
+	// 		status = "okay";
+	// 		label = "lan";
+	// 	};
+	// };
+		// seems correct
+		wan: port@4 {
+			status = "okay";
+			label = "wan";
+
+			// this is confirmed from factory section on stock firmware
+			nvmem-cells = <&macaddr_factory_e006>;
+			nvmem-cell-names = "mac-address";
+		};
+		// it's one of 1, because 0 2 4 is def wrong
+		lan: port@3 {
+				status = "okay";
+				label = "lan";
+		};
+	};
+};
+
+// when I plug cable into physical lan socket, it says link is up on wan port
+// in previous dts (wrong_dts_13) it said wan when I plugged cable into wan socket, and nothing for lan socket
+// now it says nothing for physical wan socket
+// it seems to me that lan needs to be defined differently
+// wrong_dts_13 is the closest to correct config so far

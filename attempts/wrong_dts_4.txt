@@ -1,0 +1,58 @@
+&gmac0 {
+	nvmem-cells = <&macaddr_factory_e000>;
+	nvmem-cell-names = "mac-address";
+};
+
+&gmac1 {
+	status = "okay";
+	label = "wan";
+	phy-handle = <&ethphy4>;
+
+	// this is confirmed from factory section
+	nvmem-cells = <&macaddr_factory_e006>;
+	nvmem-cell-names = "mac-address";
+};
+
+
+&ethphy4 {
+	/delete-property/ interrupts;
+};
+
+
+// next test : mac0 to port 6, mac1 to port 5
+
+&switch0 {
+	ports {
+		port@4 {
+			status = "okay";
+			label = "lan";
+
+			// nvmem-cells = <&macaddr_factory_e006>;
+			// nvmem-cell-names = "mac-address";
+		};
+		// port@4 {
+		// 	status = "okay";
+		// 	label = "lan";
+		// };
+
+		port@5 {
+			status = "okay";
+			phy-mode = "rgmii";
+
+			fixed-link {
+				speed = <0x3e8>;
+				full-duplex;
+			};
+		};
+
+		port@6 {
+			status = "okay";
+			phy-mode = "trgmii";
+
+			fixed-link {
+				speed = <0x3e8>;
+				full-duplex;
+			};
+		};
+	};
+};
